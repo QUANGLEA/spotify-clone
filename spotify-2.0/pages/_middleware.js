@@ -17,8 +17,7 @@ export async function middleware(req) {
 
     // Redirect them to login if they don't have token AND are requesting a protected route
     if (!token && pathname !== '/login') {
-        const url = req.nextUrl.clone()
-        url.pathname = '/login'
-        return NextResponse.redirect(url);
+        const url = "spotify-clone-2-d7ude5jwq-quanglea.vercel.app"
+        return NextResponse.redirect(url + "/login");
     }
 }
