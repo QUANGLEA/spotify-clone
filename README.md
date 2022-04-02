@@ -21,3 +21,5 @@ The link to my application is: https://spotify-clone-2-chi.vercel.app/
 
 <strong>Note:</strong> In order for this app to work, the user must have a Spotify player up and running in the background, either online or on the desktop app.
 
+Contributing: Please feel free to open an issue or PR to discuss more features/bug reports. Feel free to contact me at lequang@grinnell.edu.
+
