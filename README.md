@@ -18,14 +18,37 @@ This is a project I created as I was learning React.js and Next.js. I used React
 
 ## Installation:
 1. Download `spotify-2.0` folder
-2. Open `spotify-2.0` in an IDE and open a terminal window at the directory
-3. Install the latest version of npm with `npm install -g npm` 
-4. Check to see if Node.js and npm are installed on your machine 
+2. Create a Next.js app with `$ npx create-next-app my-project` and substituting `my-project` with your desired project name
+3. Run `$ cd my-project` to go into your project directory
+4. Run these commands to install Tailwind CSS: 
 ```
-node -v
-npm -v
+$ npm install -D tailwindcss postcss autoprefixer
+$ npx tailwindcss init -p
+```
+6. Copy all files from `spotify-2.0` into your newly created `my-project` directory
+7. Install the latest version of npm with `npm install -g npm`
+8. Check to see if Node.js and npm are installed on your machine 
+```
+$ node -v
+$ npm -v
 ``` 
-5. 
+5. Use the command `$ cd spotify-2.0` to download some modules for the project
+6. Run `$ npm install tailwind-scrollbar-hide` to install the tailwind scrollbar hide module, which is a part of the app's feature to scroll without displaying a bar 
+7. Run `$ npm install --save-dev http-proxy-middleware` to install Middleware HTPP Proxy server, which will help with redirecting user to the correct page of the webstite 
+8. Run `$ npm install recoil` to install Recoil, which will help with global state handling for keeping track of current playlist ID and playlist selection 
+9. Run `$ npm install next-auth` to install Next Auth, this will use the Spotify API provider to help create a Spotify log in screen that will prompt the user to log into their account.
+10. These should be all the modules you need to download in order to run the app
+11. Now, you need to create a Spotify Developer account to get a public client key and a public client secret key
+12. In `my-project`, create a file called `.env.local` to store your Spotify keys and use them in the app without exposing them 
+In the file include these lines: 
+```
+NEXTAUTH_URL=http://localhost:3000/
+NEXT_PUBLIC_CLIENT_SECRET=YOUR PUBLIC CLIENT SECRET KEY
+NEXT_PUBLIC_CLIENT_ID=YOUR PUBLIC CLINET KEY
+JWT_SECRET=some_super_secret_value 
+```
+14. Run `$ cd my-project` and run `$ npm run dev` to start the app in your local browser
+15. Enjoy the Spotify clone and add any other details thatm might be interesting to the application 
 
 ## Vercel-Deployed Application:
 The link to my application is: https://spotify-clone-2-chi.vercel.app/
